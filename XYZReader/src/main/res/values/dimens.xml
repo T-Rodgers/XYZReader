@@ -9,5 +9,7 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <dimen name="list_text_view_padding">8dp</dimen>
+    <dimen name="default_app_bar_elevation">4dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
 
 </resources>
