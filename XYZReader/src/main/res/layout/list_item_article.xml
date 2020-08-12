@@ -30,15 +30,14 @@
 
         <TextView
             android:id="@+id/article_title"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/list_text_view_padding"
             android:paddingLeft="@dimen/list_text_view_padding"
             android:paddingRight="@dimen/list_text_view_padding"
             android:textColor="@color/white"
             android:ellipsize="end"
-            android:maxLines="1" />
+            android:maxLines="2" />
 
         <TextView
             android:id="@+id/article_subtitle"
