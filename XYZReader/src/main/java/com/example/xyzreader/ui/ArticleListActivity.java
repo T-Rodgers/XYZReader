@@ -303,28 +303,11 @@ public class ArticleListActivity extends AppCompatActivity implements
             super(view);
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
-            setCustomFont(titleView, context);
+            CustomFonts.setCustomFontOne(titleView, context);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            CustomFonts.setCustomFontTwo(subtitleView, context);
         }
 
-        public void setCustomFont(TextView view, Context context) {
-            view.setTypeface(Typeface.createFromAsset(context.getResources().getAssets(), "Rosario-Regular.ttf"));
-        }
     }
-
-
-    //TODO (1) App uses the Design Support library and its provided widget types
-    //TODO (2) App uses CoordinatorLayout for MainActivity
-    //TODO (3) App theme extends from AppCompat
-    //TODO (4) App uses an AppBar and associated Toolbars
-    //TODO (5) App provides a FloatingActionButton for the most common actions
-    //TODO (6) App properly specifies elevations for app bars, FABs, and other elements
-    //TODO (7) App has consistent color theme defined in styles.xml
-    //TODO (8) App provides sufficient space between text and surrounding elements
-    //TODO (9) App uses images that are high quality, specific, and full bleed
-    //TODO (10) App uses fonts that are either the Android Defaults or complementary
-    //TODO (11) App conforms to common standards found in the ANdroid Nanodegree General Project Guidelines
-    //TODO (12) App utilizes stable release versions of all libraries, Gradle, and Android Studio
-
 
 }

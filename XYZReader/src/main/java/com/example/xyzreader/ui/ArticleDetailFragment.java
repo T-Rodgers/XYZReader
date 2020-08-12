@@ -2,6 +2,7 @@ package com.example.xyzreader.ui;
 
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -206,12 +207,12 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
+        CustomFonts.setCustomFontOne(titleView, getContext());
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
+        CustomFonts.setCustomFontTwo(bylineView, getContext());
         bylineView.setMovementMethod(new LinkMovementMethod());
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
-
-
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
+        CustomFonts.setCustomFontTwo(bodyView, getContext());
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
