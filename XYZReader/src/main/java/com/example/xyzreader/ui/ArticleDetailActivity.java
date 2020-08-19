@@ -85,7 +85,7 @@ public class ArticleDetailActivity extends AppCompatActivity
         mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onSupportNavigateUp();
+                ArticleDetailActivity.super.onBackPressed();
             }
         });
 
