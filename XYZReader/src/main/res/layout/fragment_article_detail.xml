@@ -1,8 +1,12 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <com.example.xyzreader.ui.DrawInsetsFrameLayout
+        android:id="@+id/draw_insets_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <com.example.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
@@ -21,7 +25,6 @@
                 <!--suppress AndroidLintContentDescription -->
 
                 <ImageView
-                    android:transitionName="@string/transition_photo"
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -41,7 +44,7 @@
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:background="#fff"
-                android:elevation="8dp"
+                android:elevation="@dimen/cardview_default_elevation"
                 android:layout_marginTop="@dimen/detail_card_top_margin">
 
                 <LinearLayout
@@ -90,22 +93,21 @@
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </RelativeLayout>
+
     </com.example.xyzreader.ui.ObservableScrollView>
 
-
+</com.example.xyzreader.ui.DrawInsetsFrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/share_fab"
-        android:stateListAnimator="@anim/fab_state_list_anim"
         android:background="@drawable/add_fab_background"
+        android:stateListAnimator="@animator/fab_state_list_anim"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/fab_height_and_width"
+        android:layout_height="@dimen/fab_height_and_width"
         android:src="@drawable/ic_share"
         android:elevation="@dimen/fab_elevation"
-        android:contentDescription="@string/action_share" />
-
-
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+        android:contentDescription="@string/action_share"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

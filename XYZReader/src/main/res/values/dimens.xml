@@ -13,5 +13,6 @@
     <dimen name="default_margin">16dp</dimen>
     <dimen name="photo_container_height">400dp</dimen>
     <dimen name="list_item_margin">8dp</dimen>
+    <dimen name="fab_height_and_width">56dp</dimen>
 
 </resources>
